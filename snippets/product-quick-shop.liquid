@@ -1,0 +1,109 @@
+
+{% assign variant = product.selected_or_first_available_variant %}
+
+<div class="quick-shop-modal-wrapper">
+  <div class="quick-shop-modal product-wrap" data-product-id="{{ item.id }}" data-variant="{{ variant | json | escape }}">
+    <span class="quick-shop-modal-close">&#xe603;</span>
+
+    <div class="product-images">
+
+      <div class="product-main-image">
+        {% assign mainImage = variant.featured_image | default: item.featured_image %}
+        <img alt="{{ mainImage.alt | escape }}" src="{{ mainImage | img_url: 'grande' }}">
+      </div>
+
+      {% if item.images.size > 1 %}
+        <div class="product-thumbnails-outer-wrapper">
+          {% if item.images.size > 4 %}
+            <span class="product-thumbnails-navigation-previous">&#xe601;</span>
+          {% endif %}
+          <div class="product-thumbnails-wrapper">
+            <div class="product-thumbnails {% if item.images.size > 4 %}has-side-scroll{% endif %}">
+              {% for image in item.images %}
+                <div class="product-thumbnail {% if mainImage == image %}active{% endif %}">
+                  <img alt="{{ image.alt | escape }}" data-high-res="{{ image | img_url: 'grande' }}" src="{{ image | img_url: 'small' }}">
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% if item.images.size > 4 %}
+            <span class="product-thumbnails-navigation-next">&#xe600;</span>
+          {% endif %}
+        </div>
+      {% endif %}
+
+    </div>
+
+    <div class="product-details-wrapper">
+      <div class="product-details">
+
+        {% if settings.product-vendor %}
+          <a class="product-vendor" href="{{ item.vendor | url_for_vendor }}">{{ item.vendor }}</a>
+        {% endif %}
+
+        <h2 class="product-title">{{ item.title }}</h2>
+
+        <p class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+
+          <span class="product-price-minimum money">
+            {{ item.price_min | money }}
+          </span>
+
+          <span class="product-price-compare money">
+            {% if item.compare_at_price_min > item.price_min %}
+              {{ item.compare_at_price_min | money }}
+            {% endif %}
+          </span>
+
+          {% if item.available %}
+            <link itemprop="availability" href="http://schema.org/InStock">
+          {% else %}
+            <link itemprop="availability" href="http://schema.org/OutOfStock">
+          {% endif %}
+        </p>
+
+        <form action="/cart/add" method="post" id="product-form-{{ item.id }}">
+
+          <div class="product-options">
+            <select class="product-variants" name="id" id="product-variants-{{ item.id }}">
+              {% for variant in item.variants %}
+                <option {% if variant == item.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+              {% endfor %}
+            </select>
+          </div>
+
+          <div class="product-quantity inline-input-wrapper">
+            <label>{{ 'general.general.quantity' | t }}</label>
+            <input type="text" name="quantity" value="1" />
+          </div>
+
+          <div class="add-to-cart">
+            {% if variant.available %}
+              <input type="submit" value="{{ 'products.product.add_to_cart' | t }}" />
+            {% else %}
+              <input type="submit" class="disabled" disabled="disabled" value="{{ 'products.product.sold_out' | t }}" />
+            {% endif %}
+          </div>
+
+          <div class="product-message"></div>
+
+        </form>
+
+        {% if item.description != blank %}
+          <div class="product-description rte">
+            {{ item.description }}
+          </div>
+        {% endif %}
+
+        <a class="view-product" href="{{ item.url }}">{{ 'products.quick_shop_modal.view_product' | t }}</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // required for splitting variants
+    // see ProductView
+    window.products["{{ item.id }}"] = {{ item | json }};
+  </script>
+</div>

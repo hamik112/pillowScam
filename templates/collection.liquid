@@ -1,0 +1,101 @@
+<h1 class="page-title">{{ collection.title }}</h1>
+
+{% include 'breadcrumbs' %}
+
+{% assign products_per_page = settings.collection-products-per-row | times: settings.collection-number-of-rows %}
+
+{% paginate collection.products by products_per_page %}
+
+<div class="collection">
+
+  {% if collection.image or collection.description != blank or settings.collection-tag-filtering %}
+    <div class="collection-header">
+      {% if collection.image %}
+        <div class="collection-featured-image">
+          <img alt="{{ collection.image.alt | escape }}" src="{{ collection | img_url: '1024x1024' }}">
+        </div>
+      {% endif %}
+
+      {% if collection.description != blank %}
+        <div class="collection-description rte">
+          {{ collection.description }}
+        </div>
+      {% endif %}
+
+      {% assign tagFiltering = false %}
+      {% assign collectionSorting = false %}
+      {% if settings.collection-tag-filtering and collection.all_tags.size > 0 and collection.handle %}
+        {% assign tagFiltering = true %}
+      {% endif %}
+      {% if settings.collection-sorting %}
+        {% assign collectionSorting = true %}
+      {% endif %}
+
+      {% if tagFiltering or collectionSorting %}
+        <div class="collection-filters">
+
+          {% if collectionSorting %}
+            <div class="collection-sorting {% if collection.current_vendor %}vendor-collection{% endif %} select-wrapper">
+
+              {% assign sortHandles = "manual|best-selling|price-ascending|price-descending|title-descending|title-ascending|created-ascending|created-descending" | split: "|" %}
+              {% capture sortTitles %}{{ 'collections.collection_sorting.manual' | t }}|{{ 'collections.collection_sorting.best_selling' | t }}|{{ 'collections.collection_sorting.price_ascending' | t }}|{{ 'collections.collection_sorting.price_descending' | t }}|{{ 'collections.collection_sorting.title_descending' | t }}|{{ 'collections.collection_sorting.title_ascending' | t }}|{{ 'collections.collection_sorting.created_ascending' | t }}|{{ 'collections.collection_sorting.created_descending' | t }}{% endcapture %}
+              {% assign sortTitles = sortTitles | split: "|" %}
+
+              {% for handle in sortHandles %}
+                {% if collection.sort_by == blank and collection.default_sort_by == handle %}
+                  {% assign currentTitle = sortTitles[forloop.index0] %}
+                {% elsif collection.sort_by == handle %}
+                  {% assign currentTitle = sortTitles[forloop.index0] %}
+                {% endif %}
+              {% endfor %}
+
+              <span class="selected-text"></span>
+              <select>
+                {% for handle in sortHandles %}
+                  {% if collection.sort_by == blank and collection.default_sort_by == handle %}
+                    <option value="{{handle}}" selected="selected">{{ sortTitles[forloop.index0] }}</option>
+                  {% elsif collection.sort_by == handle %}
+                    <option value="{{handle}}" selected="selected">{{ sortTitles[forloop.index0] }}</option>
+                  {% else %}
+                    <option value="{{handle}}">{{ sortTitles[forloop.index0] }}</option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+            </div>
+          {% endif %}
+
+          {% if tagFiltering %}
+            <div class="collection-tags-wrapper select-wrapper">
+              <span class="selected-text"></span>
+              <select class="collection-tags" data-url="{{ collection.handle }}">
+                <option value="all">{{ 'collections.collection.all_tags' | t }}</option>
+                {% for tag in collection.all_tags %}
+                  {% if current_tags contains tag %}
+                    <option value="{{ tag | handle }}" selected="selected">{{ tag }}</option>
+                  {% else %}
+                    <option value="{{ tag | handle }}">{{ tag }}</option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+            </div>
+          {% endif %}
+
+        </div>
+      {% endif %}
+
+    </div>
+  {% endif %}
+
+  <div class="collection-products rows-of-{{ settings.collection-products-per-row }}">
+    {% for product in collection.products %}
+      {% include 'product-list-item' %}
+    {% else %}
+      <p class="empty">{{ 'collections.collection.empty' | t }}</p>
+    {% endfor %}
+  </div>
+
+</div>
+
+{% include 'pagination' %}
+
+{% endpaginate %}

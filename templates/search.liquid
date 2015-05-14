@@ -1,0 +1,74 @@
+<h1 class="page-title">
+  {% if search.performed %}
+    {{ 'general.search.header_search_performed' | t }}
+  {% else %}
+    {{ 'general.search.header' | t }}
+  {% endif %}
+</h1>
+
+{% include 'breadcrumbs' %}
+
+<div class="search-results-wrapper">
+
+  {% if search.performed %}
+    <div class="search-results-count">
+      <p>{{ 'general.search.search_results' | t: count: search.results_count, search_terms: search.terms }}</p>
+    </div>
+
+    {% paginate search.results by 50 %}
+      {% assign productResultsCount = 0 %}
+      {% assign otherResultsCount = 0 %}
+      {% for item in search.results  %}
+        {% if item.featured_image %}
+          {% assign productResultsCount = productResultsCount | plus: 1 %}
+        {% else %}
+          {% assign otherResultsCount = productResultsCount | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+
+      {% if productResultsCount > 0 %}
+        <div class="search-results-products">
+          {% for item in search.results %}
+            {% if item.featured_image %}
+              {% include 'product-list-item' %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if otherResultsCount > 0 %}
+        <div class="search-results-other">
+          <h2 class="section-title">{{ 'general.search.other_results' | t }}</h2>
+
+          <div class="search-results-list">
+            {% for item in search.results %}
+              {% unless item.featured_image %}
+                <article class="search-results-item">
+
+                  <a class="search-results-link" href="{{ item.url }}">
+
+                    <div class="search-results-data">
+                      <h3 class="search-result-title">{{ item.title }}</h3>
+                      <time class="search-result-date">{{ item.published_at | date: format: 'short_month' }}</time>
+                    </div>
+
+                  </a>
+
+                </article>
+              {% endunless %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if paginate.previous or paginate.next %}
+        {% include 'pagination' %}
+      {% endif %}
+    {% endpaginate %}
+
+  {% else %}
+
+    <p class="no-search">{{ 'general.search.no_search' | t }}</p>
+
+  {% endif %}
+</div>

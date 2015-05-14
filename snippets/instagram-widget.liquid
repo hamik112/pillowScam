@@ -1,0 +1,38 @@
+{% if settings.instagram-widget-access-token != blank %}
+	{% if settings.instagram-username != blank %}
+		{% capture instagramLink %}
+		<a href="http://instagram.com/{{ settings.instagram-username }}">@{{ settings.instagram-username }}</a>
+		{% endcapture %}
+		<div class="instagram-follow">
+			<span>{{ 'general.social.follow_on_instagram_html' | t: instagram_link: instagramLink }}</span>
+		</div>
+	{% endif %}
+	<div class="instagram-widget">
+		<div class="instagram-photos"></div>
+	</div>
+
+	<div class="instaFoot">
+		<div class="instaFoot-text">
+			Finally, a pillow that works as hard as you do.
+		</div>
+		<a class="instaFoot-button" href="/products/sleepclean-pillowcase">
+			shop now
+		</a>
+	</div>
+
+{% else %}
+
+	<div class="instagram-widget onboarding">
+		<div class="instagram-photos">
+			{% for i in (1..3) %}
+				<div class="instagram-photo">
+					<span></span>
+				</div>
+			{% endfor %}
+		</div>
+		{% capture instagramLink %}
+		<a href="http://instagram.com/pixelunion">@pixelunion</a>
+		{% endcapture %}
+	</div>
+
+{% endif %}

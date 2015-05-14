@@ -1,0 +1,89 @@
+<h1 class="page-title">{{ 'cart.general.header' | t }}</h1>
+
+{% include 'breadcrumbs' %}
+
+{% if cart.item_count > 0 %}
+
+  <form class="cart-form" action="/cart" method="post">
+
+    <table class="cart-items">
+      <thead>
+        <tr>
+          <th class="first">{{ 'general.general.product' | t }}</th>
+          <th>{{ 'general.general.price' | t }}</th>
+          <th>{{ 'general.general.quantity' | t }}</th>
+          <th class="last" colspan="2">{{ 'general.general.total' | t }}</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for item in cart.items %}
+          <tr class="cart-item variant-{{ item.variant.id }} {% include 'for-looper' %}" data-variant="{{ item.variant.id }}" data-title="{{ item.product.title }}" data-url="{{ item.product.url }}">
+            <td class="product-item first">
+              <a class="image" href="{{ item.product.url }}">
+                <img alt="{{ item.image.alt | escape }}" src="{{ item | img_url: 'compact' }}">
+              </a>
+
+              <div class="product-item-details">
+                {% if settings.product-vendor %}
+                  <span class="cart-brand">{{ item.vendor | link_to_vendor }}</span>
+                {% endif %}
+                <span class="cart-title">{{ item.product.title | link_to: item.product.url }}</span>
+                {% unless item.variant.title == 'Default Title' %}
+                  <span class="cart-variant">{{ item.variant.title }}</span>
+                {% endunless %}
+              </div>
+
+              <a class="remove" href="/cart/change?line={{ forloop.index }}&amp;quantity=0">&#xe603;</a>
+            </td>
+            <td class="price"><span class="money">{{ item.price | money }}</span></td>
+            <td class="quantity"><input type="text" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}"></td>
+            <td class="total last"><span class="money">{{ item.quantity | times: item.price | money }}</span></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+
+    </table>
+
+    <div class="cart-tools">
+
+      {% if settings.cart-special-instructions %}
+        <div class="cart-instructions">
+          <h2>{{ 'cart.general.special_instructions' | t }}</h2>
+          <textarea placeholder="{{ settings.cart-special-instructions-placeholder }}" name="note">{{ cart.note }}</textarea>
+        </div>
+      {% endif %}
+
+      <div class="cart-totals">
+        <p class="cart-price"><span class="money">{{ cart.total_price | money }}</span></p>
+        {% if settings.cart-show-shipping-note %}
+          <p class="cart-message">{{ 'cart.general.tax_and_shipping' | t }}</p> 
+        {% endif %}
+
+        {% if settings.currency-switcher or settings.ajax == false %}
+          <input class="cart-update button secondary" type="submit" name="update" value="{{ 'general.general.update' | t }}">
+        {% endif %}
+
+        <input class="cart-checkout button" type="submit" name="checkout" value="{{ 'cart.general.submit' | t }}">
+
+        {% if additional_checkout_buttons %}
+          <div>{{ content_for_additional_checkout_buttons }}</div>
+        {% endif %}
+      </div>
+
+    </div>
+
+  </form>
+
+  {% if settings.shipping-calculator and cart.requires_shipping %}
+    {% include 'shipping-calculator' %}
+  {% endif %}
+
+{% else %}
+
+  {% capture continueLink %}
+    <a href="{{ shop.url }}/collections/all">{{ 'cart.general.continue_link' | t }}</a>
+  {% endcapture %}
+  <p class="empty">{{ 'cart.general.empty_html' | t: continue_link: continueLink }}</p>
+
+{% endif %}

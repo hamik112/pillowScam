@@ -1,0 +1,33 @@
+<div class="mini-cart">
+  <div class="arrow"></div>
+
+  {% for item in cart.items %}
+    <article class="mini-cart-item" data-variant="{{ item.variant.id }}" data-url="{{ item.url }}" data-title="{{ item.product.title }}">
+
+      <figure class="mini-cart-item-image">
+        <a href="{{ item.url }}">
+          <img alt="{{ item.image.alt | escape }}" src="{{ item | img_url: 'small' }}">
+        </a>
+      </figure>
+
+      <div class="mini-cart-item-details">
+        <p class="mini-cart-item-quantity">{{ 'layout.mini_cart.quantity' | t }}: <span>{{ item.quantity }}</span></p>
+        <p class="mini-cart-item-title">
+          <a href="{{ item.url }}">
+            {{ item.product.title }} {% unless item.variant.title == 'Default Title' %}({{ item.variant.title }}){% endunless %}
+          </a>
+        </p>
+        <p class="mini-cart-item-price"><span class="money">{{ item.price | money }}</span></p>
+      </div>
+
+      <span class="mini-cart-item-remove">&#xe604;</span>
+
+    </article>
+  {% endfor %}
+
+  <div class="mini-cart-footer">
+    <a class="button secondary" href="/cart">{{ 'layout.mini_cart.view_cart' | t }}</a>
+    <a class="button" href="/checkout">{{ 'layout.mini_cart.checkout' | t }}</a>
+  </div>
+
+</div>
