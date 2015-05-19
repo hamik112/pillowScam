@@ -18,14 +18,14 @@
     <disable_hints />
   </component>
   <component name="DockManager">
-    <window id="1">
+    <window id="2">
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="linxStyle.scss" pinned="false" current="false" current-in-tab="true">
+            <file leaf-file-name="linxStyle.scss" pinned="false" current="true" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/custom/linxStyle.scss">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state line="396" column="17" selection-start="6440" selection-end="6440" vertical-scroll-proportion="0.93442625" vertical-offset="7350" max-vertical-offset="8060">
+                  <state line="960" column="27" selection-start="14672" selection-end="14672" vertical-scroll-proportion="0.36139333" vertical-offset="18951" max-vertical-offset="20720">
                     <folding />
                   </state>
                 </provider>
@@ -42,93 +42,66 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="footer.liquid" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snippets/footer.liquid">
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="8" selection-start="4478" selection-end="4478" vertical-scroll-proportion="-9.923077" vertical-offset="2002" max-vertical-offset="5660">
+            <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="120">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="freakdesign_custom_fields.min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/freakdesign_custom_fields.min.js">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="326" max-vertical-offset="1260">
+            <state line="284" column="49" selection-start="8983" selection-end="8983" vertical-scroll-proportion="0.0" vertical-offset="4686" max-vertical-offset="6640">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="theme.liquid" pinned="false" current="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/layout/theme.liquid">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="0" selection-start="2449" selection-end="2449" vertical-scroll-proportion="0.26845637" vertical-offset="1380" max-vertical-offset="3460">
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings_data.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/settings_data.json">
+      <file leaf-file-name="product.liquid" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/product.liquid">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="246" column="46" selection-start="9031" selection-end="9031" vertical-scroll-proportion="-13.346154" vertical-offset="4573" max-vertical-offset="18400">
+            <state line="123" column="26" selection-start="4560" selection-end="4560" vertical-scroll-proportion="-22.615385" vertical-offset="1872" max-vertical-offset="3640">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings_schema.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/settings_schema.json">
+      <file leaf-file-name="plugins.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/plugins.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2925" column="4" selection-start="73460" selection-end="73460" vertical-scroll-proportion="29.423077" vertical-offset="60030" max-vertical-offset="62760">
+            <state line="133" column="11815" selection-start="61591" selection-end="61591" vertical-scroll-proportion="0.0" vertical-offset="2138" max-vertical-offset="2760">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newFoot.liquid" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snippets/newFoot.liquid">
+      <file leaf-file-name="theme.js.liquid" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/theme.js.liquid">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="12" selection-start="326" selection-end="326" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="880">
+            <state line="1178" column="16" selection-start="43725" selection-end="43725" vertical-scroll-proportion="-4.8846154" vertical-offset="23433" max-vertical-offset="52840">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="home-slideshow.liquid" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/snippets/home-slideshow.liquid">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="609">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="useless.liquid" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snippets/useless.liquid">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="5" selection-start="19202" selection-end="19202" vertical-scroll-proportion="-1.5384616" vertical-offset="0" max-vertical-offset="160">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="share-buttons.liquid" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snippets/share-buttons.liquid">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="105" selection-start="1312" selection-end="1320" vertical-scroll-proportion="-11.076923" vertical-offset="192" max-vertical-offset="1100">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="theme.liquid" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/layout/theme.liquid">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="21" selection-start="3087" selection-end="3087" vertical-scroll-proportion="-67.23077" vertical-offset="252" max-vertical-offset="2780">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="social-meta.liquid" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snippets/social-meta.liquid">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="39" selection-start="1097" selection-end="1097" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="2000">
+            <state line="9" column="14" selection-start="64" selection-end="369" vertical-scroll-proportion="-6.923077" vertical-offset="0" max-vertical-offset="1280">
               <folding />
             </state>
           </provider>
@@ -148,13 +121,19 @@
         <option value="$PROJECT_DIR$/custom/config.rb" />
         <option value="$PROJECT_DIR$/config.yml" />
         <option value="$PROJECT_DIR$/snippets/instagram-widget.liquid" />
-        <option value="$PROJECT_DIR$/snippets/header.liquid" />
         <option value="$PROJECT_DIR$/snippets/footer.liquid" />
-        <option value="$PROJECT_DIR$/layout/theme.liquid" />
         <option value="$PROJECT_DIR$/snippets/useless.liquid" />
         <option value="$PROJECT_DIR$/snippets/newFoot.liquid" />
-        <option value="$PROJECT_DIR$/custom/linxStyle.scss" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/snippets/product-tabs.liquid" />
+        <option value="$PROJECT_DIR$/templates/page.about.liquid" />
+        <option value="$PROJECT_DIR$/templates/page.liquid" />
+        <option value="$PROJECT_DIR$/snippets/header.liquid" />
+        <option value="$PROJECT_DIR$/assets/theme.js.liquid" />
+        <option value="$PROJECT_DIR$/assets/app.js" />
+        <option value="$PROJECT_DIR$/templates/product.liquid" />
+        <option value="$PROJECT_DIR$/layout/theme.liquid" />
+        <option value="$PROJECT_DIR$/custom/linxStyle.scss" />
       </list>
     </option>
   </component>
@@ -210,6 +189,76 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sleepclean" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sleepclean" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sleepclean" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sleepclean" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="snippets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sleepclean" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sleepclean" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sleepclean" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sleepclean" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="custom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sleepclean" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sleepclean" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -257,8 +306,8 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33016878" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33016878" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -308,11 +357,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/logo-retina.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/linxStyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="1" selection-start="802" selection-end="802" vertical-scroll-proportion="0.0" vertical-offset="784" max-vertical-offset="1600">
@@ -344,26 +388,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/header.liquid">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="74" selection-start="101" selection-end="132" vertical-scroll-proportion="-1.5384616" vertical-offset="0" max-vertical-offset="560">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/freakdesign_custom_fields.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/footer.liquid">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="8" selection-start="4478" selection-end="4478" vertical-scroll-proportion="-9.923077" vertical-offset="2002" max-vertical-offset="5660">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -377,11 +407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/settings_schema.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2925" column="4" selection-start="73460" selection-end="73460" vertical-scroll-proportion="29.423077" vertical-offset="60030" max-vertical-offset="62760">
@@ -392,13 +417,6 @@
     <entry file="file://$PROJECT_DIR$/config/settings_data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="246" column="46" selection-start="9031" selection-end="9031" vertical-scroll-proportion="-13.346154" vertical-offset="4573" max-vertical-offset="18400">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout/theme.liquid">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="21" selection-start="3087" selection-end="3087" vertical-scroll-proportion="-67.23077" vertical-offset="252" max-vertical-offset="2780">
           <folding />
         </state>
       </provider>
@@ -430,14 +448,9 @@
     <entry file="file://$PROJECT_DIR$/snippets/useless.liquid">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="5" selection-start="19202" selection-end="19202" vertical-scroll-proportion="-1.5384616" vertical-offset="0" max-vertical-offset="160">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/custom/linxStyle.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="396" column="17" selection-start="6440" selection-end="6440" vertical-scroll-proportion="0.93442625" vertical-offset="7350" max-vertical-offset="8060">
-          <folding />
+          <folding>
+            <marker date="1431546338885" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -451,6 +464,146 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="609">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snippets/product-tabs.liquid">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="6" selection-start="660" selection-end="660" vertical-scroll-proportion="-25.384615" vertical-offset="0" max-vertical-offset="780">
+          <folding>
+            <marker date="1431611760212" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1431611760212" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1431611760212" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1431611760212" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1431611760212" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1431611760212" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1431611760212" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1431611760212" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1431611760212" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1431611760212" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1431611760212" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1431611760212" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1431611760212" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snippets/footer.liquid">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="50.76923" vertical-offset="1320" max-vertical-offset="5660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/page.about.liquid">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="76" selection-start="1967" selection-end="1967" vertical-scroll-proportion="-4.1538463" vertical-offset="772" max-vertical-offset="1760">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/page.liquid">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="69" selection-start="22" selection-end="69" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="220">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/test.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sticky-header-logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/slide-1-image.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/no-image.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/logo-retina.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/checkout_logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/bigX.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snippets/header.liquid">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="37" selection-start="1096" selection-end="1096" vertical-scroll-proportion="-20.038462" vertical-offset="139" max-vertical-offset="1080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/product.liquid">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="26" selection-start="4560" selection-end="4560" vertical-scroll-proportion="-22.615385" vertical-offset="1872" max-vertical-offset="3640">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/plugins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="11815" selection-start="61591" selection-end="61591" vertical-scroll-proportion="0.0" vertical-offset="2138" max-vertical-offset="2760">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/theme.js.liquid">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1178" column="16" selection-start="43725" selection-end="43725" vertical-scroll-proportion="-4.8846154" vertical-offset="23433" max-vertical-offset="52840">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="284" column="49" selection-start="8983" selection-end="8983" vertical-scroll-proportion="0.0" vertical-offset="4686" max-vertical-offset="6640">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snippets/home-slideshow.liquid">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="14" selection-start="64" selection-end="369" vertical-scroll-proportion="-6.923077" vertical-offset="0" max-vertical-offset="1280">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout/theme.liquid">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="0" selection-start="2449" selection-end="2449" vertical-scroll-proportion="0.26845637" vertical-offset="1380" max-vertical-offset="3460">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/custom/linxStyle.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="960" column="27" selection-start="14672" selection-end="14672" vertical-scroll-proportion="0.36139333" vertical-offset="18951" max-vertical-offset="20720">
           <folding />
         </state>
       </provider>

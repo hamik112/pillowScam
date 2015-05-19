@@ -6,63 +6,63 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>
-    {{ page_title }}
+	<title>
+		{{ page_title }}
 
-    {% if current_tags %}
-      &#8211; {{ current_tags | join: ', ' }}
-    {% endif %}
+		{% if current_tags %}
+			&#8211; {{ current_tags | join: ', ' }}
+		{% endif %}
 
-    {% if current_page != 1 %}
-      &#8211; {{ 'general.pagination.page' | t: page_number: current_page }}
-    {% endif %}
+		{% if current_page != 1 %}
+			&#8211; {{ 'general.pagination.page' | t: page_number: current_page }}
+		{% endif %}
 
-    {% unless page_title contains shop.name %}
-      &#8211; {{ shop.name }}
-    {% endunless %}
-  </title>
+		{% unless page_title contains shop.name %}
+		&#8211; {{ shop.name }}
+		{% endunless %}
+	</title>
 
-  {% if page_description %}
-    <meta name="description" content="{{ page_description | escape }}" />
-  {% endif %}
+	{% if page_description %}
+		<meta name="description" content="{{ page_description | escape }}" />
+	{% endif %}
 
-  {% if settings.favicon %}
-    <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png" />
-  {% endif %}
+	{% if settings.favicon %}
+		<link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png" />
+	{% endif %}
 
-  <link rel="canonical" href="{{ canonical_url }}" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+	<link rel="canonical" href="{{ canonical_url }}" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  {{ content_for_header }}
+	{{ content_for_header }}
 
-  {% include 'social-meta' %}
+	{% include 'social-meta' %}
 
 	<!-- Theme CSS -->
-  {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
+	{{ 'theme.scss.css' | asset_url | stylesheet_tag }}
 
 	{{ 'linxStyle.css' | asset_url | stylesheet_tag }}
 
 
 	{% if settings.custom-css != blank %}
-    <style>
-      {{ settings.custom-css }}
-    </style>
-  {% endif %}
+		<style>
+			{{ settings.custom-css }}
+		</style>
+	{% endif %}
 
-  <!-- Third Party JS Libraries -->
-  {{ 'modernizr-2.8.2.min.js' | asset_url | script_tag }}
+	<!-- Third Party JS Libraries -->
+	{{ 'modernizr-2.8.2.min.js' | asset_url | script_tag }}
 
-  <!-- Theme object -->
-  {% include 'theme-options' %}
+	<!-- Theme object -->
+	{% include 'theme-options' %}
 
-  <script>
-    window.products = {};
-  </script>
- {{ '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' | script_tag }}
-
+	<script>
+		window.products = {};
+	</script>
+	{{ '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' | script_tag }}
+	{{ 'app.js' | asset_url | script_tag }}
 
 	<script src="//use.typekit.net/uaz2eti.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
@@ -71,63 +71,97 @@
 
 <body class="{% if customer %}customer-logged-in{% endif %} template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}  {% if settings.blog-promo %}has-promo{% endif %} {% if settings.related-products and collection.products.size > 1 and template contains 'product' %}has-related-products-{{ settings.related-products-position }}{% endif %} {% if settings.product-hover == 'quick-shop' %}has-quick-shop{% endif %} loading" >
 
-  {% include 'header' %}
-  {% include 'navigation' %}
+{% include 'header' %}
+{% include 'navigation' %}
 
-  {% if template == 'index' and settings.slideshow %}
-    {% include 'home-slideshow' %}
-  {% endif %}
+{% if template == 'index' and settings.slideshow %}
 
-  	<div class="extraText">
+
+	{% assign slides = "slide-1|slide-2|slide-3|slide-4|slide-5" | split: "|" %}
+	{% assign slideCount = 0 %}
+	{% for slide in slides %}
+		{% capture enabled %}show-{{slide}}{% endcapture %}
+		{% if settings[enabled] %}
+			{% assign slideCount = slideCount | plus: 1 %}
+		{% endif %}
+	{% endfor %}
+	{% for slide in slides %}
+		{% if forloop.first %}
+			{% capture enabled %}show-{{slide}}{% endcapture %}
+			{% capture alignment %}{{slide}}-content-alignment{% endcapture %}
+			{% capture title %}{{slide}}-title{% endcapture %}
+			{% capture subtitle %}{{slide}}-subtitle{% endcapture %}
+			{% capture cta %}{{slide}}-cta{% endcapture %}
+			{% capture url %}{{slide}}-url{% endcapture %}
+			<div class="slideShow-replacement">
+				<div class="replacement" style="background-image: url({{ slide | append:'-image.jpg' | asset_url }})">
+					<img class="replacement-dummyImage" src="{{ slide | append:'-image.jpg' | asset_url }}" alt="{{ settings[title] }}"/>
+					<div class="replacement-title">
+						{% if settings[title] != blank %}
+							<h3 class="slide-title">{{ settings[title] }}</h3>
+						{% endif %}
+					</div>
+					<div class="replacement-button">
+						{% if settings[cta] != blank and settings[url] != blank %}
+							<a class="slide-cta button" href="{{settings[url]}}">{{ settings[cta] }}</a>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		{% endif %}
+	{% endfor %}
+
+	<div class="extraText">
 		it's time to wake up to clear skin
-  	</div>
+	</div>
+{% endif %}
 
-  {% if template == 'index' and settings.masonry-features %}
-    {% include 'masonry-features' %}
-  {% endif %}
+{% if template == 'index' and settings.masonry-features %}
+	{% include 'masonry-features' %}
+{% endif %}
 
-  {% if template == 'index' %}
-    {% if settings.featured-collections or settings.featured-products or settings.instagram-widget or settings.twitter-widget %}
-      <div class="main-content">
-        {{ content_for_layout }}
-      </div>
-    {% endif %}
-  {% else %}
-    <div class="main-content">
-      {{ content_for_layout }}
-    </div>
-  {% endif %}
+{% if template == 'index' %}
+	{% if settings.featured-collections or settings.featured-products or settings.instagram-widget or settings.twitter-widget %}
+		<div class="main-content">
+			{{ content_for_layout }}
+		</div>
+	{% endif %}
+{% else %}
+	<div class="main-content">
+		{{ content_for_layout }}
+	</div>
+{% endif %}
 
-  {% include 'newFoot' %}
+{% include 'newFoot' %}
 
-  <!-- Scripts -->
-  {{ 'jquery-1.11.1.min.js' | asset_url | script_tag }}
-  {{ 'api.jquery.js' | shopify_asset_url | script_tag }}
+<!-- Scripts -->
+{{ 'jquery-1.11.1.min.js' | asset_url | script_tag }}
+{{ 'api.jquery.js' | shopify_asset_url | script_tag }}
 
-  {% if template contains 'cart' %}
+{% if template contains 'cart' %}
 
-    {% if settings.shipping-calculator %}
-      {{ "/services/javascripts/countries.js" | script_tag }}
-      {{ "shopify_common.js" | shopify_asset_url | script_tag }}
-    {% endif %}
+	{% if settings.shipping-calculator %}
+		{{ "/services/javascripts/countries.js" | script_tag }}
+		{{ "shopify_common.js" | shopify_asset_url | script_tag }}
+	{% endif %}
 
-    {{ 'jquery.cart.min.js' | asset_url | script_tag }}
-  {% endif %}
+	{{ 'jquery.cart.min.js' | asset_url | script_tag }}
+{% endif %}
 
-  {% if template contains 'customers' %}
-    {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
-    {{ 'customer_area.js'  | shopify_asset_url | script_tag }}
-  {% endif %}
+{% if template contains 'customers' %}
+	{{ 'shopify_common.js' | shopify_asset_url | script_tag }}
+	{{ 'customer_area.js'  | shopify_asset_url | script_tag }}
+{% endif %}
 
-  {% if settings.currency-switcher %}
-    {{ "//cdn.shopify.com/s/javascripts/currencies.js" | script_tag }}
-    {{ "jquery.currencies.js" | asset_url | script_tag }}
-  {% endif %}
+{% if settings.currency-switcher %}
+	{{ "//cdn.shopify.com/s/javascripts/currencies.js" | script_tag }}
+	{{ "jquery.currencies.js" | asset_url | script_tag }}
+{% endif %}
 
-  {{ 'option_selection.js' | shopify_asset_url | script_tag }}
+{{ 'option_selection.js' | shopify_asset_url | script_tag }}
 
-  {{ 'plugins.js'  | asset_url | script_tag }}
-  {{ 'theme.js'  | asset_url | script_tag }}
+{{ 'plugins.js'  | asset_url | script_tag }}
+{{ 'theme.js'  | asset_url | script_tag }}
 
 </body>
 </html>

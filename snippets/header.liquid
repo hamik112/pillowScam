@@ -1,23 +1,49 @@
-<header class="linxHeader">
-	<div class="linxHeader-leftBlock">
-		<a class="linxHeader-anchor" href="/products/sleepclean-pillowcase">
-			Shop
-		</a>
-		<a class="linxHeader-anchor" href="/pages/about">
-			About
-		</a>
+<header class="linxHeader {{ template | downcase | replace: ' ', '-' }}">
+	<div class="linxHeader-desktop">
+		<div class="linxHeader-leftBlock">
+			<a class="linxHeader-anchor product" href="/products/sleepclean-pillowcase">
+				Shop
+			</a>
+			<a class="linxHeader-anchor page" href="/pages/about">
+				About
+			</a>
+		</div>
+		<div class="linxHeader-logoBlock">
+			<a class="linxHeader-homeButton" href="/">
+				Sleepclean
+			</a>
+		</div>
+		<div class="linxHeader-rightBlock">
+			<a class="linxHeader-anchor" href="/checkout">
+				Checkout
+			</a>
+			<a class="linxHeader-anchor cart" href="/cart">
+				Cart
+			</a>
+		</div>
 	</div>
-	<div class="linxHeader-logoBlock">
-		<a class="linxHeader-homeButton" href="/">
-			Sleepclean
-		</a>
-	</div>
-	<div class="linxHeader-rightBlock">
-		<a class="linxHeader-anchor" href="/checkout">
-			Checkout
-		</a>
-		<a class="linxHeader-anchor" href="/cart">
-			Cart
-		</a>
+	<div class="linxHeader-mobile js-mobileMenu">
+
+		<div class="linxHeader-logoBlock">
+			<a class="linxHeader-homeButton" href="/">
+				Sleepclean
+			</a>
+		</div>
+		<div class="linxHeader-trigger open js-mobileMenu-openTrigger" style="background-image: url({{ 'icon.png' | asset_url }})"></div>
+		<div class="linxHeader-trigger close js-mobileMenu-closeTrigger" style="background-image: url({{ 'bigX.png' | asset_url }})"></div>
+		<div class="linxHeader-menu">
+			<a class="linxHeader-anchor product" href="/products/sleepclean-pillowcase">
+				Shop
+			</a>
+			<a class="linxHeader-anchor page" href="/pages/about">
+				About
+			</a>
+			<a class="linxHeader-anchor" href="/checkout">
+				Checkout
+			</a>
+			<a class="linxHeader-anchor cart" href="/cart">
+				Cart
+			</a>
+		</div>
 	</div>
 </header>

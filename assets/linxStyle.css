@@ -15,22 +15,135 @@
   left: 0;
   background-color: #fff;
   z-index: 100;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+/* line 53, ../custom/linxStyle.scss */
+.linxHeader.product .product {
+  color: #8eecd0;
+}
+/* line 58, ../custom/linxStyle.scss */
+.linxHeader.cart .cart {
+  color: #8eecd0;
+}
+/* line 63, ../custom/linxStyle.scss */
+.linxHeader.page .page {
+  color: #8eecd0;
+}
+
+/* line 69, ../custom/linxStyle.scss */
+.linxHeader-desktop {
+  float: left;
+  width: 100%;
+}
+
+/* line 74, ../custom/linxStyle.scss */
+.linxHeader-mobile {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+/* line 78, ../custom/linxStyle.scss */
+.linxHeader-mobile .linxHeader-logoBlock {
+  position: static;
+  float: left;
+  width: 100%;
+  height: 61px;
+  line-height: 61px;
+  border: none;
+  text-align: center;
+}
+/* line 86, ../custom/linxStyle.scss */
+.linxHeader-mobile .linxHeader-logoBlock .linxHeader-homeButton {
+  position: relative;
+  margin: 0 auto;
+  border: 1px solid #8eecd0;
+  line-height: 61px;
+  padding: 6px 8px;
+  font-size: 16px;
+}
+/* line 96, ../custom/linxStyle.scss */
+.linxHeader-mobile .linxHeader-trigger {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  right: 10px;
+  height: 25px;
+  width: 40px;
+  border-radius: 3px;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* line 109, ../custom/linxStyle.scss */
+.linxHeader-mobile .linxHeader-trigger.open {
+  display: block;
+}
+/* line 112, ../custom/linxStyle.scss */
+.linxHeader-mobile .linxHeader-trigger.close {
+  display: none;
+  height: 40px;
+}
+/* line 117, ../custom/linxStyle.scss */
+.linxHeader-mobile .linxHeader-menu {
+  position: absolute;
+  top: 61px;
+  left: 0;
+  right: 0;
+  display: none;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+/* line 128, ../custom/linxStyle.scss */
+.linxHeader-mobile .linxHeader-menu .linxHeader-anchor {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  line-height: 40px;
+  text-align: center;
+}
+/* line 137, ../custom/linxStyle.scss */
+.linxHeader-mobile.active .linxHeader-menu {
+  display: block;
+}
+/* line 141, ../custom/linxStyle.scss */
+.linxHeader-mobile.active .linxHeader-trigger.open {
+  display: none;
+}
+/* line 144, ../custom/linxStyle.scss */
+.linxHeader-mobile.active .linxHeader-trigger.close {
+  display: block;
+}
+
+/* line 152, ../custom/linxStyle.scss */
+.linxHeader .linxHeader-desktop {
+  display: block;
+}
+/* line 155, ../custom/linxStyle.scss */
+.linxHeader .linxHeader-mobile {
+  display: none;
+}
+
+/* line 161, ../custom/linxStyle.scss */
+.sticky-header .linxHeader {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-/* line 54, ../custom/linxStyle.scss */
+/* line 166, ../custom/linxStyle.scss */
 .linxHeader-leftBlock {
   float: left;
   width: 33%;
   height: 61px;
 }
-/* line 58, ../custom/linxStyle.scss */
+/* line 170, ../custom/linxStyle.scss */
 .linxHeader-leftBlock .linxHeader-anchor {
   float: left;
   margin: 0 0 0 34px;
 }
 
-/* line 64, ../custom/linxStyle.scss */
+/* line 176, ../custom/linxStyle.scss */
 .linxHeader-logoBlock {
   position: fixed;
   top: 10px;
@@ -44,19 +157,19 @@
   line-height: 39px;
 }
 
-/* line 77, ../custom/linxStyle.scss */
+/* line 189, ../custom/linxStyle.scss */
 .linxHeader-rightBlock {
   float: right;
   width: 33%;
   height: 41px;
 }
-/* line 81, ../custom/linxStyle.scss */
+/* line 193, ../custom/linxStyle.scss */
 .linxHeader-rightBlock .linxHeader-anchor {
   float: right;
   margin: 0 34px 0 0;
 }
 
-/* line 87, ../custom/linxStyle.scss */
+/* line 199, ../custom/linxStyle.scss */
 .linxHeader-anchor {
   font-family: 'brandon-grotesque';
   color: #555;
@@ -66,7 +179,7 @@
   font-weight: bold;
 }
 
-/* line 96, ../custom/linxStyle.scss */
+/* line 209, ../custom/linxStyle.scss */
 .linxHeader-homeButton {
   font-family: 'brandon-grotesque';
   color: #8eecd0;
@@ -75,69 +188,69 @@
   line-height: 39px;
 }
 
-/* line 104, ../custom/linxStyle.scss */
+/* line 217, ../custom/linxStyle.scss */
 .navigation-wrapper {
   display: none !important;
 }
 
-/* line 108, ../custom/linxStyle.scss */
+/* line 221, ../custom/linxStyle.scss */
 .home-slideshow.content-width {
   margin: 0 auto;
   max-width: 100%;
   padding-left: 30px;
   padding-right: 30px;
 }
-/* line 114, ../custom/linxStyle.scss */
+/* line 227, ../custom/linxStyle.scss */
 .lt-ie9 .home-slideshow.content-width {
   width: 100%;
 }
 
-/* line 117, ../custom/linxStyle.scss */
+/* line 230, ../custom/linxStyle.scss */
 .slideshow-slide {
   width: 100%;
 }
 
-/* line 121, ../custom/linxStyle.scss */
+/* line 234, ../custom/linxStyle.scss */
 .slide-image-wrapper {
   overflow: hidden;
 }
-/* line 124, ../custom/linxStyle.scss */
+/* line 237, ../custom/linxStyle.scss */
 .slide-image-wrapper img {
   display: block;
   width: 100%;
 }
 
-/* line 134, ../custom/linxStyle.scss */
+/* line 247, ../custom/linxStyle.scss */
 .slide-1 h3,
 .slide-1 p {
   color: white;
 }
 
-/* line 134, ../custom/linxStyle.scss */
+/* line 247, ../custom/linxStyle.scss */
 .slide-2 h3,
 .slide-2 p {
   color: white;
 }
 
-/* line 134, ../custom/linxStyle.scss */
+/* line 247, ../custom/linxStyle.scss */
 .slide-3 h3,
 .slide-3 p {
   color: white;
 }
 
-/* line 134, ../custom/linxStyle.scss */
+/* line 247, ../custom/linxStyle.scss */
 .slide-4 h3,
 .slide-4 p {
   color: white;
 }
 
-/* line 134, ../custom/linxStyle.scss */
+/* line 247, ../custom/linxStyle.scss */
 .slide-5 h3,
 .slide-5 p {
   color: white;
 }
 
-/* line 141, ../custom/linxStyle.scss */
+/* line 254, ../custom/linxStyle.scss */
 .slide-content {
   position: absolute;
   top: 50%;
@@ -149,28 +262,28 @@
   transform: translateY(-50%);
 }
 @media (max-width: 770px) {
-  /* line 141, ../custom/linxStyle.scss */
+  /* line 254, ../custom/linxStyle.scss */
   .slide-content {
     left: 30px;
     right: 30px;
   }
 }
-/* line 153, ../custom/linxStyle.scss */
+/* line 266, ../custom/linxStyle.scss */
 .content-aligned-center .slide-content {
   text-align: center;
 }
-/* line 157, ../custom/linxStyle.scss */
+/* line 270, ../custom/linxStyle.scss */
 .content-aligned-right .slide-content {
   text-align: right;
 }
 
-/* line 162, ../custom/linxStyle.scss */
+/* line 275, ../custom/linxStyle.scss */
 .slide-content-inner {
   margin: 0 auto;
   max-width: 100%;
 }
 
-/* line 167, ../custom/linxStyle.scss */
+/* line 280, ../custom/linxStyle.scss */
 .slide-title {
   margin: 0;
   font-size: 60px;
@@ -179,61 +292,61 @@
   letter-spacing: -0.03em;
 }
 @media (max-width: 1020px) {
-  /* line 167, ../custom/linxStyle.scss */
+  /* line 280, ../custom/linxStyle.scss */
   .slide-title {
     font-size: 50px;
   }
 }
 @media (max-width: 770px) {
-  /* line 167, ../custom/linxStyle.scss */
+  /* line 280, ../custom/linxStyle.scss */
   .slide-title {
     font-size: 32px;
   }
 }
 @media (max-width: 540px) {
-  /* line 167, ../custom/linxStyle.scss */
+  /* line 280, ../custom/linxStyle.scss */
   .slide-title {
     font-size: 18px;
   }
 }
 
-/* line 188, ../custom/linxStyle.scss */
+/* line 301, ../custom/linxStyle.scss */
 .slide-subtitle {
   margin: 5px 0 0;
   font-size: 21px;
 }
 @media (max-width: 770px) {
-  /* line 188, ../custom/linxStyle.scss */
+  /* line 301, ../custom/linxStyle.scss */
   .slide-subtitle {
     font-size: 16px;
   }
 }
 @media (max-width: 540px) {
-  /* line 188, ../custom/linxStyle.scss */
+  /* line 301, ../custom/linxStyle.scss */
   .slide-subtitle {
     font-size: 14px;
   }
 }
 
-/* line 196, ../custom/linxStyle.scss */
+/* line 309, ../custom/linxStyle.scss */
 .slide-cta {
   margin: 16px 0 0;
   font-size: 16px;
 }
 @media (max-width: 770px) {
-  /* line 196, ../custom/linxStyle.scss */
+  /* line 309, ../custom/linxStyle.scss */
   .slide-cta {
     margin-top: 20px;
   }
 }
 @media (max-width: 540px) {
-  /* line 196, ../custom/linxStyle.scss */
+  /* line 309, ../custom/linxStyle.scss */
   .slide-cta {
     margin-top: 15px;
     padding: 10px 15px;
   }
 }
-/* line 206, ../custom/linxStyle.scss */
+/* line 319, ../custom/linxStyle.scss */
 .slide-cta.button {
   background-color: transparent;
   border: 3px solid #fff;
@@ -245,7 +358,7 @@
   font-family: "brandon-grotesque";
 }
 
-/* line 218, ../custom/linxStyle.scss */
+/* line 331, ../custom/linxStyle.scss */
 .extraText {
   text-transform: uppercase;
   color: #aaa;
@@ -260,14 +373,14 @@
   clear: both;
 }
 
-/* line 232, ../custom/linxStyle.scss */
+/* line 345, ../custom/linxStyle.scss */
 .instagram-follow {
   float: left;
   width: 100%;
   position: relative;
   margin: 30px 0;
 }
-/* line 237, ../custom/linxStyle.scss */
+/* line 350, ../custom/linxStyle.scss */
 .instagram-follow span {
   position: relative;
   z-index: 2;
@@ -276,7 +389,7 @@
   background-color: #fff;
   padding: 0 20px;
 }
-/* line 245, ../custom/linxStyle.scss */
+/* line 358, ../custom/linxStyle.scss */
 .instagram-follow::before {
   position: absolute;
   content: '';
@@ -286,7 +399,7 @@
   left: 0;
   top: 49%;
 }
-/* line 254, ../custom/linxStyle.scss */
+/* line 367, ../custom/linxStyle.scss */
 .instagram-follow::after {
   position: absolute;
   content: '';
@@ -297,17 +410,17 @@
   top: 49%;
 }
 
-/* line 265, ../custom/linxStyle.scss */
+/* line 378, ../custom/linxStyle.scss */
 .instaFoot {
   font-family: "brandon-grotesque";
 }
-/* line 267, ../custom/linxStyle.scss */
+/* line 380, ../custom/linxStyle.scss */
 .instaFoot .instaFoot-text {
   color: #111;
   margin: 40px 0 20px 0;
   font-size: 25px;
 }
-/* line 272, ../custom/linxStyle.scss */
+/* line 385, ../custom/linxStyle.scss */
 .instaFoot .instaFoot-button {
   text-transform: uppercase;
   font-weight: normal;
@@ -319,7 +432,7 @@
   padding: 10px 50px;
 }
 
-/* line 285, ../custom/linxStyle.scss */
+/* line 398, ../custom/linxStyle.scss */
 .linxFoot {
   float: left;
   width: 100%;
@@ -327,12 +440,12 @@
   margin: 20px 0;
   padding: 20px 15%;
 }
-/* line 291, ../custom/linxStyle.scss */
+/* line 404, ../custom/linxStyle.scss */
 .linxFoot .linxFoot-left {
   float: left;
   width: 50%;
 }
-/* line 294, ../custom/linxStyle.scss */
+/* line 407, ../custom/linxStyle.scss */
 .linxFoot .linxFoot-left .linxFoot-anchor {
   color: #777;
   font-family: "brandon-grotesque";
@@ -343,7 +456,7 @@
   width: 100%;
   margin-bottom: 1px;
 }
-/* line 304, ../custom/linxStyle.scss */
+/* line 417, ../custom/linxStyle.scss */
 .linxFoot .linxFoot-left .linxFoot-homeButton {
   float: left;
   width: 114px;
@@ -356,17 +469,17 @@
   text-align: center;
   margin-bottom: 14px;
 }
-/* line 317, ../custom/linxStyle.scss */
+/* line 430, ../custom/linxStyle.scss */
 .linxFoot .linxFoot-right {
   float: right;
   width: 220px;
 }
-/* line 320, ../custom/linxStyle.scss */
+/* line 433, ../custom/linxStyle.scss */
 .linxFoot .linxFoot-right .share-buttons {
   line-height: 30px;
   height: 30px;
 }
-/* line 323, ../custom/linxStyle.scss */
+/* line 436, ../custom/linxStyle.scss */
 .linxFoot .linxFoot-right .share-buttons a {
   width: 25%;
   height: 30px;
@@ -374,22 +487,22 @@
   text-align: center;
   font-size: 14px;
 }
-/* line 329, ../custom/linxStyle.scss */
+/* line 442, ../custom/linxStyle.scss */
 .linxFoot .linxFoot-right .share-buttons a.share-youtube {
   font-size: 21px;
 }
 
-/* line 337, ../custom/linxStyle.scss */
+/* line 450, ../custom/linxStyle.scss */
 .linxFoot-socials {
   float: right;
   width: 220px;
 }
-/* line 340, ../custom/linxStyle.scss */
+/* line 453, ../custom/linxStyle.scss */
 .linxFoot-socials .share-buttons {
   float: left;
 }
 
-/* line 345, ../custom/linxStyle.scss */
+/* line 458, ../custom/linxStyle.scss */
 .linxFoot-register {
   float: right;
   width: 220px;
@@ -397,7 +510,7 @@
   margin-bottom: 10px;
   margin-top: 0;
 }
-/* line 351, ../custom/linxStyle.scss */
+/* line 464, ../custom/linxStyle.scss */
 .linxFoot-register .register-text {
   text-transform: uppercase;
   color: #555;
@@ -408,7 +521,7 @@
   width: 100%;
   line-height: 20px;
 }
-/* line 361, ../custom/linxStyle.scss */
+/* line 474, ../custom/linxStyle.scss */
 .linxFoot-register .register-input {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -422,7 +535,7 @@
   font-size: 13px;
   margin-bottom: 0;
 }
-/* line 374, ../custom/linxStyle.scss */
+/* line 487, ../custom/linxStyle.scss */
 .linxFoot-register .register-submit {
   float: left;
   width: 70px;
@@ -439,13 +552,574 @@
   font-size: 12px;
   margin-bottom: 0;
 }
-/* line 389, ../custom/linxStyle.scss */
+/* line 502, ../custom/linxStyle.scss */
 .linxFoot-register .register-submit:hover {
   background-color: rgba(0, 0, 0, 0.21);
 }
 
-/* line 395, ../custom/linxStyle.scss */
+/* line 508, ../custom/linxStyle.scss */
 .social-widget-wrapper {
   border-top: none;
   padding-top: 0;
+}
+
+/* line 514, ../custom/linxStyle.scss */
+.template-product .main-content {
+  padding-top: 62px;
+}
+
+/* line 519, ../custom/linxStyle.scss */
+.template-page .main-content {
+  padding-top: 12px;
+}
+
+/* line 525, ../custom/linxStyle.scss */
+.product-details .product-title {
+  font-family: "brandon-grotesque";
+  color: #555;
+  font-size: 26px;
+  letter-spacing: -0.01em;
+}
+/* line 531, ../custom/linxStyle.scss */
+.product-details .product-teaser-title {
+  font-family: "brandon-grotesque";
+  color: #222;
+  font-size: 16px;
+  line-height: 18px;
+  margin: 10px 0 30px 0;
+}
+
+/* line 540, ../custom/linxStyle.scss */
+.product-price {
+  margin-top: 10px;
+  float: left;
+  bordeR: 1px solid #8eecd0;
+  font-family: "brandon-grotesque";
+  color: #111;
+  font-size: 18px;
+  text-align: center;
+  line-height: 38px;
+  height: 40px;
+  width: 156px;
+  margin-bottom: 14px;
+}
+
+/* line 554, ../custom/linxStyle.scss */
+.productForm {
+  float: right;
+  margin-top: 10px;
+  margin-bottom: 14px;
+}
+
+/* line 561, ../custom/linxStyle.scss */
+.product-details-wrapper .share-buttons {
+  margin-top: 0;
+  float: left;
+}
+
+/* line 569, ../custom/linxStyle.scss */
+.product-shippingMessage {
+  float: left;
+  color: #777;
+  font-family: "brandon-grotesque";
+  font-size: 14px;
+  font-style: italic;
+  margin-left: 30px;
+  line-height: 20px;
+}
+
+/* line 579, ../custom/linxStyle.scss */
+.productstabbing {
+  float: left;
+  width: 100%;
+}
+/* line 582, ../custom/linxStyle.scss */
+.productstabbing .tabs {
+  min-height: 33px;
+  float: left;
+  width: 100%;
+}
+/* line 587, ../custom/linxStyle.scss */
+.productstabbing .tab {
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+/* line 592, ../custom/linxStyle.scss */
+.productstabbing .tab-anchor {
+  font-family: "brandon-grotesque";
+  font-size: 14px;
+  text-align: center;
+  padding: 0;
+  color: #222;
+}
+/* line 598, ../custom/linxStyle.scss */
+.productstabbing .tab-anchor:last-child {
+  padding: 0;
+}
+/* line 601, ../custom/linxStyle.scss */
+.productstabbing .tab-anchor.active {
+  color: #777;
+}
+
+/* line 607, ../custom/linxStyle.scss */
+#tab-1, #tab-2, #tab-3, #tab-4 {
+  float: left;
+  width: 100%;
+}
+
+/* line 612, ../custom/linxStyle.scss */
+#tab-2 .spr-container {
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-top: 0;
+  border-width: 0;
+}
+
+/* line 619, ../custom/linxStyle.scss */
+.spr-container {
+  border-width: 0;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+/* line 624, ../custom/linxStyle.scss */
+.spr-container .spr-header {
+  font-family: "brandon-grotesque";
+  height: 50px;
+  border-bottom: 1px solid #dee;
+}
+/* line 628, ../custom/linxStyle.scss */
+.spr-container .spr-header .spr-header-title {
+  margin-bottom: 0;
+  font-weight: 500;
+  color: #555;
+  font-size: 20px;
+  float: left;
+  height: 50px;
+  letter-spacing: -0.01em;
+}
+/* line 637, ../custom/linxStyle.scss */
+.spr-container .spr-header .spr-summary {
+  float: right;
+  height: 50px;
+  width: 203px;
+  text-align: right;
+}
+/* line 645, ../custom/linxStyle.scss */
+.spr-container .spr-starrating i {
+  font-size: 90%;
+}
+/* line 650, ../custom/linxStyle.scss */
+.spr-container .spr-summary-caption span {
+  color: #222;
+}
+/* line 654, ../custom/linxStyle.scss */
+.spr-container .spr-summary-actions {
+  text-align: left;
+}
+/* line 656, ../custom/linxStyle.scss */
+.spr-container .spr-summary-actions a {
+  line-height: 16px;
+  float: left;
+  text-align: left;
+  text-decoration: underline;
+}
+
+/* line 665, ../custom/linxStyle.scss */
+.spr-content {
+  font-family: "brandon-grotesque";
+}
+/* line 667, ../custom/linxStyle.scss */
+.spr-content .spr-reviews {
+  margin-top: 8px;
+}
+/* line 670, ../custom/linxStyle.scss */
+.spr-content .spr-pagination {
+  float: left;
+  width: 100%;
+}
+/* line 674, ../custom/linxStyle.scss */
+.spr-content .spr-review {
+  padding-top: 4px;
+  background-color: #eee;
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+}
+/* line 682, ../custom/linxStyle.scss */
+.spr-content .spr-review .spr-review-header-title {
+  display: none;
+}
+/* line 685, ../custom/linxStyle.scss */
+.spr-content .spr-review .spr-review-header {
+  float: left;
+  width: 100%;
+}
+/* line 690, ../custom/linxStyle.scss */
+.spr-content .spr-review .spr-review-footer {
+  float: right;
+  width: 70%;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s linear;
+  -moz-transition: opacity 0.2s linear;
+  -ms-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  padding-right: 8px;
+  text-transform: uppercase;
+}
+/* line 701, ../custom/linxStyle.scss */
+.spr-content .spr-review .spr-review-footer a {
+  color: #999;
+}
+/* line 705, ../custom/linxStyle.scss */
+.spr-content .spr-review .spr-review-content {
+  float: right;
+  width: 70%;
+  font-family: "brandon-grotesque";
+  color: #222;
+  margin-bottom: 8px;
+  padding-right: 10px;
+}
+/* line 713, ../custom/linxStyle.scss */
+.spr-content .spr-review .spr-starratings {
+  display: block;
+  float: right;
+  width: 70%;
+  max-width: 70%;
+  overflow: hidden;
+}
+/* line 720, ../custom/linxStyle.scss */
+.spr-content .spr-review .spr-review-header-byline {
+  display: block;
+  float: left;
+  font-family: "brandon-grotesque";
+  font-weight: normal;
+  color: #222;
+  width: 28%;
+  max-width: 28%;
+  padding: 5px 15px 0 10px;
+  overflow: hidden;
+  font-style: normal;
+  position: absolute;
+  top: 10px;
+  bottom: 0;
+  left: 5px;
+  opacity: 1;
+  line-height: 16px;
+}
+/* line 737, ../custom/linxStyle.scss */
+.spr-content .spr-review .spr-review-header-byline strong {
+  line-height: 16px;
+  font-style: normal;
+  font-weight: normal;
+  color: #222;
+  font-size: 15px;
+}
+/* line 746, ../custom/linxStyle.scss */
+.spr-content .spr-review:hover .spr-review-footer {
+  opacity: 1;
+}
+/* line 750, ../custom/linxStyle.scss */
+.spr-content .spr-review:first-child {
+  margin-top: 4px;
+}
+
+/* line 756, ../custom/linxStyle.scss */
+.spr-form-contact label, .spr-form-reviews label, .spr-form-actions label {
+  margin: 8px 0;
+}
+
+/* line 764, ../custom/linxStyle.scss */
+#tab-1 li h2 {
+  letter-spacing: normal;
+  line-height: 24px;
+  color: #555;
+  font-size: 16px;
+}
+/* line 770, ../custom/linxStyle.scss */
+#tab-1 li h4 {
+  letter-spacing: normal;
+  color: #555;
+}
+
+/* line 777, ../custom/linxStyle.scss */
+.aboutHeader {
+  margin: 0 auto 20px auto;
+  width: 300px;
+  position: relative;
+  height: 350px;
+  max-width: none;
+}
+/* line 783, ../custom/linxStyle.scss */
+.aboutHeader .headLogo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 10px auto;
+}
+/* line 791, ../custom/linxStyle.scss */
+.aboutHeader .headMore {
+  float: left;
+  width: 100%;
+  margin-top: 310px;
+  text-align: center;
+  position: relative;
+}
+/* line 797, ../custom/linxStyle.scss */
+.aboutHeader .headMore span {
+  color: #555;
+  font-family: "brandon-grotesque";
+  font-size: 14px;
+  font-weight: normal;
+}
+/* line 803, ../custom/linxStyle.scss */
+.aboutHeader .headMore .headMore-icon {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  right: 0;
+  margin: 10px auto;
+  width: 40px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid #000;
+  cursor: pointer;
+}
+/* line 816, ../custom/linxStyle.scss */
+.aboutHeader::after {
+  clear: both;
+  height: 1px;
+}
+/* line 820, ../custom/linxStyle.scss */
+.aboutHeader::before {
+  clear: both;
+  height: 1px;
+}
+
+/* line 826, ../custom/linxStyle.scss */
+h1.about-sleepclean {
+  display: none;
+}
+
+/* line 830, ../custom/linxStyle.scss */
+.page-content.about-sleepclean {
+  /*width: 100%;*/
+  padding: 0;
+  margin-top: 0;
+  margin-left: -40px;
+  margin-right: -40px;
+  max-width: none;
+}
+/* line 837, ../custom/linxStyle.scss */
+.page-content.about-sleepclean .aboutSection {
+  max-width: none;
+}
+
+/* line 842, ../custom/linxStyle.scss */
+.aboutSection {
+  max-width: none;
+  width: 100%;
+  float: left;
+  position: relative;
+  /*min-height: 380px;*/
+  padding: 40px 0;
+  border-bottom: 1px solid #ddd;
+}
+/* line 851, ../custom/linxStyle.scss */
+.aboutSection.odd {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* line 860, ../custom/linxStyle.scss */
+.aboutSection-wrapper {
+  width: 780px;
+  position: relative;
+  margin: 0 auto;
+}
+/* line 864, ../custom/linxStyle.scss */
+.aboutSection-wrapper:after {
+  clear: both;
+  display: table;
+  content: "";
+}
+/* line 869, ../custom/linxStyle.scss */
+.aboutSection-wrapper:before {
+  clear: both;
+  display: table;
+  content: "";
+}
+
+/* line 876, ../custom/linxStyle.scss */
+.about-sectionHeader {
+  float: left;
+  width: 100%;
+  padding-left: 22%;
+  font-family: "brandon-grotesque";
+  color: #333;
+  font-size: 17px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+/* line 887, ../custom/linxStyle.scss */
+.aboutSection-body {
+  float: left;
+  width: 100%;
+  padding-left: 22%;
+  font-family: "brandon-grotesque";
+  color: #222;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 19px;
+  padding-bottom: 40px;
+}
+
+/* line 899, ../custom/linxStyle.scss */
+.aboutSection-image {
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+/* line 903, ../custom/linxStyle.scss */
+.aboutSection-image img {
+  width: 100px;
+  height: auto;
+  border: 1px solid #ddd;
+}
+
+/* line 910, ../custom/linxStyle.scss */
+.slideShow-replacement {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+/* line 914, ../custom/linxStyle.scss */
+.slideShow-replacement:before {
+  padding-top: 37%;
+  content: "";
+  display: block;
+}
+/* line 919, ../custom/linxStyle.scss */
+.slideShow-replacement .replacement {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+/* line 931, ../custom/linxStyle.scss */
+.replacement-dummyImage {
+  display: none;
+}
+
+/* line 934, ../custom/linxStyle.scss */
+.replacement-title {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 945, ../custom/linxStyle.scss */
+.replacement-button {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 198px;
+  margin: 0 auto;
+}
+
+/* line 957, ../custom/linxStyle.scss */
+.template-index {
+  margin-top: 61px;
+}
+
+@media (max-width: 820px) {
+  /* line 962, ../custom/linxStyle.scss */
+  .slideShow-replacement {
+    float: left;
+    width: 100%;
+    position: relative;
+  }
+  /* line 966, ../custom/linxStyle.scss */
+  .slideShow-replacement:before {
+    padding-top: 56%;
+  }
+
+  /* line 972, ../custom/linxStyle.scss */
+  .linxHeader .linxHeader-desktop {
+    display: none;
+  }
+  /* line 975, ../custom/linxStyle.scss */
+  .linxHeader .linxHeader-mobile {
+    display: block;
+  }
+
+  /* line 979, ../custom/linxStyle.scss */
+  .product-images {
+    padding: 0 11px;
+    margin-bottom: 15px;
+  }
+
+  /* line 985, ../custom/linxStyle.scss */
+  .product-thumbnails-outer-wrapper .product-thumbnails-navigation-previous {
+    padding-right: 10px;
+  }
+  /* line 988, ../custom/linxStyle.scss */
+  .product-thumbnails-outer-wrapper .product-thumbnails-navigation-next {
+    padding-left: 10px;
+  }
+
+  /* line 992, ../custom/linxStyle.scss */
+  .product-details-wrapper {
+    padding: 0 11px;
+  }
+  /* line 994, ../custom/linxStyle.scss */
+  .product-details-wrapper .productForm {
+    margin-left: 0;
+  }
+  /* line 997, ../custom/linxStyle.scss */
+  .product-details-wrapper .product-title {
+    font-size: 19px;
+    color: #222;
+  }
+  /* line 1001, ../custom/linxStyle.scss */
+  .product-details-wrapper .product-teaser-title {
+    display: none;
+  }
+  /* line 1004, ../custom/linxStyle.scss */
+  .product-details-wrapper .productstabbing {
+    margin-top: 20px;
+  }
+
+  /* line 1008, ../custom/linxStyle.scss */
+  .product-price {
+    width: 110px;
+    font-size: 14px;
+    height: 30px;
+    line-height: 28px;
+  }
+
+  /* line 1016, ../custom/linxStyle.scss */
+  .productForm .product-quantity input {
+    width: 28px;
+    padding: 4px 0;
+  }
+  /* line 1022, ../custom/linxStyle.scss */
+  .productForm .add-to-cart input {
+    text-align: center;
+    padding: 6px 0;
+    width: 110px;
+  }
 }
